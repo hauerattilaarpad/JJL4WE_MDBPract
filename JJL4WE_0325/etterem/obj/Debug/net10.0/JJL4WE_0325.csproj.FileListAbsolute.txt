@@ -1,0 +1,14 @@
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\bin\Debug\net10.0\JJL4WE_0325.exe
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\bin\Debug\net10.0\JJL4WE_0325.deps.json
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\bin\Debug\net10.0\JJL4WE_0325.runtimeconfig.json
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\bin\Debug\net10.0\JJL4WE_0325.dll
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\bin\Debug\net10.0\JJL4WE_0325.pdb
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\obj\Debug\net10.0\JJL4WE_0325.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\obj\Debug\net10.0\JJL4WE_0325.AssemblyInfoInputs.cache
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\obj\Debug\net10.0\JJL4WE_0325.AssemblyInfo.cs
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\obj\Debug\net10.0\JJL4WE_0325.csproj.CoreCompileInputs.cache
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\obj\Debug\net10.0\JJL4WE_0325.dll
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\obj\Debug\net10.0\refint\JJL4WE_0325.dll
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\obj\Debug\net10.0\JJL4WE_0325.pdb
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\obj\Debug\net10.0\JJL4WE_0325.genruntimeconfig.cache
+C:\Users\hatti\Desktop\JJL4WE_0225\JJL4WE_0325\obj\Debug\net10.0\ref\JJL4WE_0325.dll

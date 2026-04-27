@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "JJL4WE_0325/1.0.0": {
+        "runtime": {
+          "JJL4WE_0325.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JJL4WE_0325/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

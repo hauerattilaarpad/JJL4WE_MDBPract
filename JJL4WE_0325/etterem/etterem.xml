@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vendeglatas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="etterem.xsd">
+
+    <!-- Ettermek -->
+    <etterem ekod="e1">
+        <nev>Aranyhal Étterem</nev>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Széchenyi u.</utca>
+            <hazszam>107</hazszam>
+        </cim>
+        <csillag>3</csillag>
+    </etterem>
+
+    <etterem ekod="e2">
+        <nev>Vörös Oroszlán Étterem</nev>
+        <cim>
+            <varos>Budapest</varos>
+            <utca>Andrássy út</utca>
+            <hazszam>12</hazszam>
+        </cim>
+        <csillag>5</csillag>
+    </etterem>
+
+    <!-- Foszakacsok -->
+    <foszakacs fkod="f1" e_f="e1">
+        <nev>Főz István</nev>
+        <eletkor>45</eletkor>
+        <vegzettseg>Szakközépsikola</vegzettseg>
+        <vegzettseg>Főiskola</vegzettseg>
+    </foszakacs>
+
+    <foszakacs fkod="f2" e_f="e2">
+        <nev>Kovács János</nev>
+        <eletkor>38</eletkor>
+        <vegzettseg>Szakközépsikola</vegzettseg>
+        <vegzettseg>Főiskola</vegzettseg>
+    </foszakacs>
+
+    <!-- Szakacs -->
+    <szakacs szkod="sz1" e_sz="e1">
+        <nev>Szabó Péter</nev>
+        <eletkor>30</eletkor>
+        <vegzettseg>Szakközépsikola</vegzettseg>
+    </szakacs>
+
+    <szakacs szkod="sz2" e_sz="e2">
+        <nev>Nagy László</nev>
+        <eletkor>28</eletkor>
+        <vegzettseg>Szakközépsikola</vegzettseg>
+    </szakacs>
+
+    <!-- Gyakornok -->
+    <gyakornok gykod="gy1" e_gy="e1">
+        <nev>Kiss Anna</nev>
+        <gyakorlat>
+            <kezdete>2026-01-01</kezdete>
+            <idotartama>2 hónap</idotartama>
+        </gyakorlat>
+        <muszak>Nappali</muszak>
+        <muszak>Hétvége</muszak>
+    </gyakornok>
+
+    <gyakornok gykod="gy2" e_gy="e2">
+        <nev>Horváth Gábor</nev>
+        <gyakorlat>
+            <kezdete>2026-01-15</kezdete>
+            <idotartama>2 hónap</idotartama>
+        </gyakorlat>
+        <muszak>Esti</muszak>
+        <muszak>Hétvége</muszak>
+    </gyakornok>
+
+    <!-- Vendeg -->
+    <vendeg vkod="v1">
+        <nev>Juhász Péter</nev>
+        <eletkor>35</eletkor>
+        <cim>
+            <varos>Debrecen</varos>
+            <utca>Kossuth Lajos utca</utca>
+            <hazszam>5</hazszam>
+        </cim>
+    </vendeg>
+
+    <vendeg vkod="v2">
+        <nev>Szűcs Mária</nev>
+        <eletkor>28</eletkor>
+        <cim>
+            <varos>Szeged</varos>
+            <utca>Rákóczi tér</utca>
+            <hazszam>3</hazszam>
+        </cim>
+    </vendeg>
+
+    <!-- Rendelés -->
+    <rendeles e_v_v="v1" e_v_e="e1">
+        <osszeg>5000</osszeg>
+        <etel>Gyulyásleves</etel>
+    </rendeles>
+
+    <rendeles e_v_v="v2" e_v_e="e2">
+        <osszeg>8000</osszeg>
+        <etel>Palacsinta</etel>
+    </rendeles>
+
+</vendeglatas>

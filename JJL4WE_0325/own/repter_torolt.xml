@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Reptér_JJL4WE xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="JJL4WE_XMLSchema1.xsd">
+  <!--Járat-->
+  <Járat Járatszám="112" Légitársaság_ID="11">
+    <célállomás>Atlanta</célállomás>
+    <indulási_idő>2023/11/20 11:00</indulási_idő>
+    <érkezési_idő>2023/11/20 23:00</érkezési_idő>
+    <státusz>várható</státusz>
+  </Járat>
+  <Járat Járatszám="113" Légitársaság_ID="13">
+    <célállomás>London</célállomás>
+    <indulási_idő>2023/11/18 23:00</indulási_idő>
+    <érkezési_idő>2023/11/19 06:00</érkezési_idő>
+    <státusz>várható</státusz>
+  </Járat>
+  <!--Jegy-->
+  <Jegy Jegysorszám="1111">
+    <ár>80000</ár>
+    <légitársaság>Emirates</légitársaság>
+    <uticél>
+      <reptérnév>Heathrow</reptérnév>
+      <ország>Egyesült Királyság</ország>
+    </uticél>
+    <indulási_idő>2023/11/18 23:00</indulási_idő>
+    <érkezési_idő>2023/11/19 06:00</érkezési_idő>
+    <hely>
+      <osztály>1</osztály>
+      <székszám>31</székszám>
+    </hely>
+  </Jegy>
+  <Jegy Jegysorszám="1112">
+    <ár>40000</ár>
+    <légitársaság>Qatar Airways</légitársaság>
+    <uticél>
+      <reptérnév>Ferihegy</reptérnév>
+      <ország>Magyarország</ország>
+    </uticél>
+    <indulási_idő>2023/11/17 17:00</indulási_idő>
+    <érkezési_idő>2023/11/17 19:00</érkezési_idő>
+    <hely>
+      <osztály>2</osztály>
+      <székszám>52</székszám>
+    </hely>
+  </Jegy>
+  <Jegy Jegysorszám="1113">
+    <ár>100000</ár>
+    <légitársaság>Lufthansa</légitársaság>
+    <uticél>
+      <reptérnév>Hartsfield-Jackson</reptérnév>
+      <ország>Egyesült Államok</ország>
+    </uticél>
+    <indulási_idő>2023/11/20 11:00</indulási_idő>
+    <érkezési_idő>2023/11/20 23:00</érkezési_idő>
+    <hely>
+      <osztály>1</osztály>
+      <székszám>11</székszám>
+    </hely>
+  </Jegy>
+  <!--Utasok-->
+  <Utasok Útlevél="98765432" Jegysorszám="1113" Járatszám="113">
+    <név>Hauer Attila</név>
+    <születésiév>2002</születésiév>
+    <nem>Férfi</nem>
+    <lakcím>Magyarország, 3527 Miskolc József Attila u. 12</lakcím>
+    <telefonszám>+36201234567</telefonszám>
+    <telefonszám>+36701234567</telefonszám>
+  </Utasok>
+  <Utasok Útlevél="87654367" Jegysorszám="1112" Járatszám="111">
+    <név>Olivia Thompson</név>
+    <születésiév>2001</születésiév>
+    <nem>Nő</nem>
+    <lakcím>Nagy-Britannia, SW1A 2AB London Downing Street 10</lakcím>
+    <telefonszám>+36209876428</telefonszám>
+    <telefonszám>+36702138757</telefonszám>
+    <telefonszám>+36705834653</telefonszám>
+  </Utasok>
+  <Utasok Útlevél="87575645" Jegysorszám="1111" Járatszám="112">
+    <név>Benjamin Mitchell</név>
+    <születésiév>1970</születésiév>
+    <nem>Nő</nem>
+    <lakcím>USA, CA 90212 Beverly Hills Rodeo Drive 123</lakcím>
+    <telefonszám>+36202345965</telefonszám>
+  </Utasok>
+  <!--Szolgáltatás (Dolgozó-Utasok kapcsolat)-->
+  <Szolgáltatás SZ_ID="3001" D_ID="2001" Útlevél="98765432">
+    <típus>Információ nyújtás</típus>
+  </Szolgáltatás>
+  <Szolgáltatás SZ_ID="3002" D_ID="2002" Útlevél="87575645">
+    <típus>Felszolgálás</típus>
+  </Szolgáltatás>
+  <Szolgáltatás SZ_ID="3003" D_ID="2003" Útlevél="87654367">
+    <típus>Bőrönd mérés</típus>
+  </Szolgáltatás>
+  <!--Dolgozó-->
+  <Dolgozó D_ID="2001" Reptér_ID="1">
+    <név>Balla Sándor</név>
+    <munkakör>Biztonságiőr</munkakör>
+    <lakcím>Magyarország, 3530 Miskolc Arany János u. 32</lakcím>
+    <telefonszám>+36204567534</telefonszám>
+    <fizetés>450000</fizetés>
+    <pozício>Biztonsági vezető</pozício>
+  </Dolgozó>
+  <Dolgozó D_ID="2002" Reptér_ID="3">
+    <név>Kobe Briant</név>
+    <munkakör>Felszolgáló</munkakör>
+    <lakcím>USA, CA 90212 Beverly Hills Rodeo Drive 25</lakcím>
+    <telefonszám>+36203641243</telefonszám>
+    <fizetés>750000</fizetés>
+    <pozício>Légi forgalmi irányító</pozício>
+  </Dolgozó>
+  <Dolgozó D_ID="2003" Reptér_ID="2">
+    <név>Charles Hamilton</név>
+    <munkakör>bőröndmérő</munkakör>
+    <lakcím>Nagy-Britannia, SW1A 2AD London Downing Street 76</lakcím>
+    <telefonszám>+36301237659</telefonszám>
+    <telefonszám>+36708646856</telefonszám>
+    <telefonszám>+36207363457</telefonszám>
+    <fizetés>350000</fizetés>
+    <pozício>Utasellátó</pozício>
+  </Dolgozó>
+  <!--Reptér-->
+  <Reptér Reptér_ID="1">
+    <elhelyezkedés>
+      <ország>Magyarország</ország>
+      <város>Budapest</város>
+      <irányítószám>1185</irányítószám>
+    </elhelyezkedés>
+  </Reptér>
+  <Reptér Reptér_ID="2">
+    <elhelyezkedés>
+      <ország>Egyesült Királyság</ország>
+      <város>London</város>
+      <irányítószám>TW62GA</irányítószám>
+    </elhelyezkedés>
+  </Reptér>
+  <Reptér Reptér_ID="3">
+    <elhelyezkedés>
+      <ország>Egyesült Államok</ország>
+      <város>Atlanta</város>
+      <irányítószám>30337</irányítószám>
+    </elhelyezkedés>
+  </Reptér>
+  <!--Légitársaság-->
+  <Légitársaság Légitársaság_ID="11" Reptér_ID="1">
+    <légitársaságnév>Lufthansa</légitársaságnév>
+  </Légitársaság>
+  <Légitársaság Légitársaság_ID="12" Reptér_ID="2">
+    <légitársaságnév>Qatar Airways</légitársaságnév>
+  </Légitársaság>
+  <Légitársaság Légitársaság_ID="13" Reptér_ID="3">
+    <légitársaságnév>Emirates</légitársaságnév>
+  </Légitársaság>
+</Reptér_JJL4WE>
