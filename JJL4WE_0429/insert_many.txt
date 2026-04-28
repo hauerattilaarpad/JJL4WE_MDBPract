@@ -1,0 +1,59 @@
+#Étterem adatok
+ettermek_adatok = [
+    {
+        "_id": "e1",
+        "nev": "Aranyhal Étterem",
+        "cim": {
+            "varos": "Miskolc",
+            "utca": "Széchenyi u.",
+            "hazszam": 107
+        },
+        "csillag": 3
+    },
+    {
+        "_id": "e2",
+        "nev": "Aranyhal Étterem",
+        "cim": {
+            "varos": "Miskolc",
+            "utca": "Széchenyi u.",
+            "hazszam": 107
+        },
+        "csillag": 4
+    },
+    {
+        "_id": "e3",
+        "nev": "Creppy Palacsintaház Étterem",
+        "cim": {
+            "varos": "Miskolc",
+            "utca": "Méylvölgy utca",
+            "hazszam": 15
+        },
+        "csillag": 5
+    }
+]
+
+
+#Főszakács adatok
+foszakacsok = [
+    {
+        "_id": "f1",
+        "e_f": "e1",
+        "nev": "Fő István",
+        "eletkor": 45,
+        "vegzettseg": ["Szakközépiskola", "Főiskola"]
+    },
+    {
+        "_id": "f2",
+        "e_f": "e2",
+        "nev": "Kovács János",
+        "eletkor": 38,
+        "vegzettseg": ["Szakközépiskola", "Főiskola"]
+    },
+    {
+        "_id": "f3",
+        "e_f": "e3",
+        "nev": "Nemes Géza",
+        "eletkor": 28,
+        "vegzettseg": ["Főiskola"]
+    }
+]
