@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!--Egyszerű típusok kigyűjtése-->
+    <!--Járat-->
+    <xs:element name="célállomás" type="xs:string" />
+    <xs:element name="érkezési_idő" type="idoTipus" />
+    <xs:element name="indulási_idő" type="idoTipus" />
+    <xs:element name="státusz" type="xs:string" />
+
+    <!--Jegy-->
+    <xs:element name="ár" type="xs:int"/>
+    <xs:element name="légitársaság" type="xs:string" />
+    <xs:element name="reptérnév" type="xs:string" />
+    <xs:element name="uticél"/>
+    <xs:element name="hely"/>
+    <xs:element name="osztály" type="osztály" />
+    <xs:element name="székszám" type="xs:int" />
+
+    <!--Utasok-->
+    <xs:element name="név" type="xs:string" />
+    <xs:element name="nem" type="nemTípus" />
+    <xs:element name="lakcím" type="xs:string" />
+    <xs:element name="telefonszám" type="telefonTípus" />
+    <xs:element name="születésiév" type="xs:int" />
+
+    <!--Szolgáltatás (Dolgozó-Utasok kapcsolat)-->
+    <xs:element name="típus" type="xs:string" />
+
+    <!--Dolgozó-->
+    <xs:element name="munkakör" type="xs:string" />
+    <xs:element name="fizetés" type="xs:int" />
+    <xs:element name="pozício" type="xs:string" />
+
+    <!--Reptér-->
+    <xs:element name="elhelyezkedés"/>
+    <xs:element name="ország" type="xs:string" />
+    <xs:element name="város" type="xs:string" />
+    <xs:element name="irányítószám" type="xs:string" />
+
+    <!--Légitársaság-->
+    <xs:element name="légitársaságnév" type="xs:string" />
+
+
+    <!--Saját típus meghatározások-->
+    <xs:simpleType name="idoTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}/\d{2}/\d{2} \d{2}:\d{2}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="osztály">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"></xs:minInclusive>
+            <xs:maxInclusive value="2"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nemTípus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Férfi"></xs:enumeration>
+            <xs:enumeration value="Nő"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="telefonTípus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+\d{1,11}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+
+
+    <!--Komplex típusok meghatározása-->
+    <xs:complexType name="járatTípus">
+        <xs:sequence>
+            <xs:element ref="célállomás"/>
+            <xs:element ref="indulási_idő"/>
+            <xs:element ref="érkezési_idő"/>
+            <xs:element ref="státusz"/>
+        </xs:sequence>
+        <xs:attribute name="Járatszám" type="xs:int"/>
+        <xs:attribute name="Légitársaság_ID" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="jegyTípus">
+        <xs:sequence>
+            <xs:element ref="ár"/>
+            <xs:element ref="légitársaság"/>
+            <xs:element name="uticél">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="reptérnév"/>
+                        <xs:element ref="ország"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element ref="indulási_idő"/>
+            <xs:element ref="érkezési_idő"/>
+            <xs:element name="hely">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="osztály"/>
+                        <xs:element ref="székszám"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="Jegysorszám" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="utasokTípus">
+        <xs:sequence>
+            <xs:element ref="név"/>
+            <xs:element ref="születésiév"/>
+            <xs:element ref="nem"/>
+            <xs:element ref="lakcím"/>
+            <xs:element name="telefonszám" type="telefonTípus" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="Jegysorszám" type="xs:int"/>
+        <xs:attribute name="Járatszám" type="xs:int"/>
+        <xs:attribute name="Útlevél" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="szolgáltatásTípus">
+        <xs:sequence>
+            <xs:element ref="típus"/>
+        </xs:sequence>
+        <xs:attribute name="SZ_ID" type="xs:int"/>
+        <xs:attribute name="Útlevél" type="xs:int"/>
+        <xs:attribute name="D_ID" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="dolgozóTípus">
+        <xs:sequence>
+            <xs:element ref="név"/>
+            <xs:element ref="munkakör"/>
+            <xs:element ref="lakcím"/>
+            <xs:element name="telefonszám" type="telefonTípus" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="fizetés"/>
+            <xs:element ref="pozício"/>
+        </xs:sequence>
+        <xs:attribute name="Reptér_ID" type="xs:int"/>
+        <xs:attribute name="D_ID" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="reptérTípus">
+        <xs:sequence>
+            <xs:element name="elhelyezkedés">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ország"/>
+                        <xs:element ref="város"/>
+                        <xs:element ref="irányítószám"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="Reptér_ID" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="légitársaságTípus">
+        <xs:sequence>
+            <xs:element name="légitársaságnév"/>
+        </xs:sequence>
+        <xs:attribute name="Reptér_ID" type="xs:int"/>
+        <xs:attribute name="Légitársaság_ID" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:element name="Reptér_JJL4WE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Járat" type="járatTípus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Jegy" type="jegyTípus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Utasok" type="utasokTípus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Szolgáltatás" type="szolgáltatásTípus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Dolgozó" type="dolgozóTípus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Reptér" type="reptérTípus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Légitársaság" type="légitársaságTípus" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        
+        <!--Elsődleges kulcsok-->
+        <xs:key name="Járatszám_kulcs">
+            <xs:selector xpath="Járat"></xs:selector>
+            <xs:field xpath="@Járatszám"></xs:field>
+        </xs:key>
+        <xs:key name="Jegy_kulcs">
+            <xs:selector xpath="Jegy"></xs:selector>
+            <xs:field xpath="@Jegysorszám"></xs:field>
+        </xs:key>
+        <xs:key name="Utasok_kulcs">
+            <xs:selector xpath="Utasok"></xs:selector>
+            <xs:field xpath="@Útlevél"></xs:field>
+        </xs:key>
+        <xs:key name="Szolgáltatás_kulcs">
+            <xs:selector xpath="Szolgáltatás"></xs:selector>
+            <xs:field xpath="@SZ_ID"></xs:field>
+        </xs:key>
+        <xs:key name="Dolgozó_kulcs">
+            <xs:selector xpath="Dolgozó"></xs:selector>
+            <xs:field xpath="@D_ID"></xs:field>
+        </xs:key>
+        <xs:key name="Reptér_kulcs">
+            <xs:selector xpath="Reptér"></xs:selector>
+            <xs:field xpath="@Reptér_ID"></xs:field>
+        </xs:key>
+        <xs:key name="Légitársaság_kulcs">
+            <xs:selector xpath="Légitársaság"></xs:selector>
+            <xs:field xpath="@Légitársaság_ID"></xs:field>
+        </xs:key>
+        <!--Idegen kulcsok-->
+        <xs:keyref name="Járat-Utasok_kulcs" refer="Járatszám_kulcs">
+            <xs:selector xpath="Utasok"></xs:selector>
+            <xs:field xpath="@Járatszám"></xs:field>
+        </xs:keyref>
+        <xs:keyref name="Jegy-Utasok_kulcs" refer="Jegy_kulcs">
+            <xs:selector xpath="Utasok"></xs:selector>
+            <xs:field xpath="@Jegysorszám"></xs:field>
+        </xs:keyref>
+        <xs:keyref name="Utasok-Szolgáltatás_kulcs" refer="Utasok_kulcs">
+            <xs:selector xpath="Szolgáltatás"></xs:selector>
+            <xs:field xpath="@Útlevél"></xs:field>
+        </xs:keyref>
+        <xs:keyref name="Dolgozó-Szolgáltatás_kulcs" refer="Dolgozó_kulcs">
+            <xs:selector xpath="Szolgáltatás"></xs:selector>
+            <xs:field xpath="@D_ID"></xs:field>
+        </xs:keyref>
+        <xs:keyref name="Reptér-Dolgozó_kulcs" refer="Reptér_kulcs">
+            <xs:selector xpath="Dolgozó"></xs:selector>
+            <xs:field xpath="@Reptér_ID"></xs:field>
+        </xs:keyref>
+        <xs:keyref name="Reptér-Légitársaság_kulcs" refer="Reptér_kulcs">
+            <xs:selector xpath="Légitársaság"></xs:selector>
+            <xs:field xpath="@Reptér_ID"></xs:field>
+        </xs:keyref>
+        <xs:keyref name="Légitársaság-Járat_kulcs" refer="Légitársaság_kulcs">
+            <xs:selector xpath="Járat"></xs:selector>
+            <xs:field xpath="@Légitársaság_ID"></xs:field>
+        </xs:keyref>
+        <!--Egy-egy kapcsolat megvalósítás-->
+        <xs:unique name="Jegy-Utasok_egy_egy">
+            <xs:selector xpath="Utasok"></xs:selector>
+            <xs:field xpath="@Jegysorszám"></xs:field>
+        </xs:unique>
+    </xs:element>
+</xs:schema>
