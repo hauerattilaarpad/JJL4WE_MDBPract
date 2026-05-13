@@ -1,0 +1,215 @@
+{
+  "Reptér_JJL4WE": {
+    "Járat": [
+      {
+        "célállomás": "Budapest",
+        "indulási_idő": "2023/11/17 17:00",
+        "érkezési_idő": "2023/11/17 19:00",
+        "státusz": "késik",
+        "_Járatszám": "111",
+        "_Légitársaság_ID": "12"
+      },
+      {
+        "célállomás": "Atlanta",
+        "indulási_idő": "2023/11/20 11:00",
+        "érkezési_idő": "2023/11/20 23:00",
+        "státusz": "várható",
+        "_Járatszám": "112",
+        "_Légitársaság_ID": "11"
+      },
+      {
+        "célállomás": "London",
+        "indulási_idő": "2023/11/18 23:00",
+        "érkezési_idő": "2023/11/19 06:00",
+        "státusz": "várható",
+        "_Járatszám": "113",
+        "_Légitársaság_ID": "13"
+      }
+    ],
+    "Jegy": [
+      {
+        "ár": "40000",
+        "légitársaság": "Emirates",
+        "uticél": {
+          "reptérnév": "Heathrow",
+          "ország": "Egyesült Királyság"
+        },
+        "indulási_idő": "2023/11/18 23:00",
+        "érkezési_idő": "2023/11/19 06:00",
+        "hely": {
+          "osztály": "1",
+          "székszám": "31"
+        },
+        "_Jegysorszám": "1111"
+      },
+      {
+        "ár": "20000",
+        "légitársaság": "Qatar Airways",
+        "uticél": {
+          "reptérnév": "Ferihegy",
+          "ország": "Magyarország"
+        },
+        "indulási_idő": "2023/11/17 17:00",
+        "érkezési_idő": "2023/11/17 19:00",
+        "hely": {
+          "osztály": "2",
+          "székszám": "52"
+        },
+        "_Jegysorszám": "1112"
+      },
+      {
+        "ár": "50000",
+        "légitársaság": "Lufthansa",
+        "uticél": {
+          "reptérnév": "Hartsfield-Jackson",
+          "ország": "Egyesült Államok"
+        },
+        "indulási_idő": "2023/11/20 11:00",
+        "érkezési_idő": "2023/11/20 23:00",
+        "hely": {
+          "osztály": "1",
+          "székszám": "11"
+        },
+        "_Jegysorszám": "1113"
+      }
+    ],
+    "Utasok": [
+      {
+        "név": "Hauer Attila",
+        "születésiév": "2002",
+        "nem": "Férfi",
+        "lakcím": "Magyarország, 3527 Miskolc József Attila u. 12",
+        "telefonszám": [
+          "+36201234567",
+          "+36701234567"
+        ],
+        "_Útlevél": "98765432",
+        "_Jegysorszám": "1113",
+        "_Járatszám": "113"
+      },
+      {
+        "név": "Olivia Thompson",
+        "születésiév": "2001",
+        "nem": "Nő",
+        "lakcím": "Nagy-Britannia, SW1A 2AB London Downing Street 10",
+        "telefonszám": [
+          "+36209876428",
+          "+36702138757",
+          "+36705834653"
+        ],
+        "_Útlevél": "87654367",
+        "_Jegysorszám": "1112",
+        "_Járatszám": "111"
+      },
+      {
+        "név": "Benjamin Mitchell",
+        "születésiév": "1970",
+        "nem": "Nő",
+        "lakcím": "USA, CA 90212 Beverly Hills Rodeo Drive 123",
+        "telefonszám": "+36202345965",
+        "_Útlevél": "87575645",
+        "_Jegysorszám": "1111",
+        "_Járatszám": "112"
+      }
+    ],
+    "Szolgáltatás": [
+      {
+        "típus": "Információ nyújtás",
+        "_SZ_ID": "3001",
+        "_D_ID": "2001",
+        "_Útlevél": "98765432"
+      },
+      {
+        "típus": "Felszolgálás",
+        "_SZ_ID": "3002",
+        "_D_ID": "2002",
+        "_Útlevél": "87575645"
+      },
+      {
+        "típus": "Bőrönd mérés",
+        "_SZ_ID": "3003",
+        "_D_ID": "2003",
+        "_Útlevél": "87654367"
+      }
+    ],
+    "Dolgozó": [
+      {
+        "név": "Balla Sándor",
+        "munkakör": "Biztonságiőr",
+        "lakcím": "Magyarország, 3530 Miskolc Arany János u. 32",
+        "telefonszám": "+36204567534",
+        "fizetés": "450000",
+        "pozício": "Biztonsági vezető",
+        "_D_ID": "2001",
+        "_Reptér_ID": "1"
+      },
+      {
+        "név": "Kobe Briant",
+        "munkakör": "Felszolgáló",
+        "lakcím": "USA, CA 90212 Beverly Hills Rodeo Drive 25",
+        "telefonszám": "+36203641243",
+        "fizetés": "750000",
+        "pozício": "Légi forgalmi irányító",
+        "_D_ID": "2002",
+        "_Reptér_ID": "3"
+      },
+      {
+        "név": "Charles Hamilton",
+        "munkakör": "bőröndmérő",
+        "lakcím": "Nagy-Britannia, SW1A 2AD London Downing Street 76",
+        "telefonszám": [
+          "+36301237659",
+          "+36708646856",
+          "+36207363457"
+        ],
+        "fizetés": "350000",
+        "pozício": "Utasellátó",
+        "_D_ID": "2003",
+        "_Reptér_ID": "2"
+      }
+    ],
+    "Reptér": [
+      {
+        "elhelyezkedés": {
+          "ország": "Magyarország",
+          "város": "Budapest",
+          "irányítószám": "1185"
+        },
+        "_Reptér_ID": "1"
+      },
+      {
+        "elhelyezkedés": {
+          "ország": "Egyesült Királyság",
+          "város": "London",
+          "irányítószám": "TW62GA"
+        },
+        "_Reptér_ID": "2"
+      },
+      {
+        "elhelyezkedés": {
+          "ország": "Egyesült Államok",
+          "város": "Atlanta",
+          "irányítószám": "30337"
+        },
+        "_Reptér_ID": "3"
+      }
+    ],
+    "Légitársaság": [
+      {
+        "légitársaságnév": "Lufthansa",
+        "_Légitársaság_ID": "11",
+        "_Reptér_ID": "1"
+      },
+      {
+        "légitársaságnév": "Qatar Airways",
+        "_Légitársaság_ID": "12",
+        "_Reptér_ID": "2"
+      },
+      {
+        "légitársaságnév": "Emirates",
+        "_Légitársaság_ID": "13",
+        "_Reptér_ID": "3"
+      }
+    ]
+  }
+}
