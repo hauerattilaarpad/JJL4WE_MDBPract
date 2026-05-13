@@ -1,0 +1,91 @@
+mongoimport --db vendeglatas --collection ettermek --file ettermek.json --jsonArray
+
+const data = JSON.parse(fs.readFileSync("ettermek.json", "utf8"))
+db.ettermek.insertMany(data)
+
+db.ettermek.find()
+db.szakacsok.find()
+show collections
+
+db.ettermek.find({}, { nev: 1, csillag: 1, _id: 0 })
+
+db.ettermek.find({ csillag: { $gte: 4 } })
+
+db.ettermek.find({
+    $or: [{ varos: "Budapest" }, { csillag: 5 }]
+})
+
+db.ettermek.find().sort({ csillag: -1 }).limit(3)
+
+db.szakacsok.find({ eletkor: { $gte: 25, $lte: 40 } })
+    db.ettermek.updateOne(
+    { nev: "Anyukam Mondta" },
+    { $set: { csillag: 5 } }
+)
+
+db.ettermek.updateOne(
+ { nev: "Trofea" },
+ { $push: { specialitasok: "steak" } }
+)
+
+db.ettermek.deleteMany({ csillag: { $lt: 3 } })
+db.ettermek.countDocuments()
+
+db.ettermek.find({ nev: "Gundel" }).explain("executionStats")
+
+db.ettermek.createIndex({ nev: 1 })
+
+db.ettermek.find({ nev: "Gundel" }).explain("executionStats")
+
+db.ettermek.aggregate([
+{
+    $group: {
+    _id: "$varos",
+    db_etterem: { $sum: 1 },
+    atlag_csillag: { $avg: "$csillag" }
+    }
+},
+{ $sort: { atlag_csillag: -1 } }
+])
+
+db.szakacsok.aggregate([
+{ $unwind: "$vegzettsegek" }, 
+{ $group: {
+    _id: "$vegzettsegek",
+    szakacsok_szama: { $sum: 1 }
+    }
+},
+{ $sort: { szakacsok_szama: -1 } }
+])
+
+db.szakacsok.aggregate([
+{
+    $lookup: {
+        from: "ettermek",
+        localField: "etterem_nev",
+        foreignField: "nev",
+        as: "etterem_adatok"
+    }
+},
+{ $unwind: "$etterem_adatok" },
+{ $match: { "etterem_adatok.csillag": { $gte: 4 } } },
+{
+    $project: {
+        _id: 0,
+        nev: 1,
+        reszleg: 1,
+        etterem: "$etterem_adatok.nev",
+        csillag: "$etterem_adatok.csillag"
+    }}
+])
+
+
+db.szakacsok.aggregate([
+{ $sort: { eletkor: -1 } },
+{
+    $group: {
+        _id: "$etterem_nev",
+        legidosebb_nev: { $first: "$nev" },
+        legidosebb_kor: { $first: "$eletkor" }
+    }
+}])

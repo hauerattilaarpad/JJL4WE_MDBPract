@@ -1,0 +1,92 @@
+
+mongoimport --db repter --collection jaratok --file jaratok.json --jsonArray
+mongoimport --db repter --collection utasok --file utasok.json --jsonArray
+
+const data = JSON.parse(fs.readFileSync("jaratok.json", "utf8"))
+db.jaratok.insertMany(data)
+
+db.jaratok.find()
+db.utasok.find()
+show collections
+
+db.jaratok.find({}, { célállomás: 1, státusz: 1, _id: 0 })
+
+db.jaratok.find({ _Légitársaság_ID: { $gte: "12" } })
+
+db.jaratok.find({
+    $or: [{ célállomás: "Budapest" }, { státusz: "késik" }]
+})
+
+db.jaratok.find().sort({ _Járatszám: -1 }).limit(3)
+
+db.utasok.find({ születésiév: { $gte: "1970", $lte: "2005" } })
+
+db.jaratok.updateOne(
+ { _Járatszám: "111" },
+ { $set: { státusz: "elindult" } }
+)
+
+db.utasok.updateOne(
+ { név: "Hauer Attila" },
+ { $push: { telefonszám: "+36301234567" } }
+)
+
+db.jaratok.deleteMany({ státusz: "törölve" })
+db.jaratok.countDocuments()
+
+db.jaratok.find({ célállomás: "Budapest" }).explain("executionStats")
+db.jaratok.createIndex({ célállomás: 1 })
+db.jaratok.find({ célállomás: "Budapest" }).explain("executionStats")
+
+db.jaratok.aggregate([
+ {
+ $group: {
+ _id: "$célállomás",
+ jaratok_szama: { $sum: 1 }
+ }
+ },
+ { $sort: { jaratok_szama: -1 } }
+])
+
+db.utasok.aggregate([
+ { $unwind: "$telefonszám" }, 
+ { $group: {
+ _id: "$telefonszám",
+ utasok_szama: { $sum: 1 }
+ }
+ },
+ { $sort: { utasok_szama: -1 } }
+])
+
+db.utasok.aggregate([
+ {
+ $lookup: {
+ from: "jaratok",
+ localField: "_Járatszám",
+ foreignField: "_Járatszám",
+ as: "jarat_adatok"
+ }
+ },
+ { $unwind: "$jarat_adatok" },
+ { $match: { "jarat_adatok.státusz": "várható" } },
+ {
+ $project: {
+ _id: 0,
+ név: 1,
+ jaratszam: "$_Járatszám",
+ celallomas: "$jarat_adatok.célállomás",
+ statusz: "$jarat_adatok.státusz"
+ }
+ }
+])
+
+db.utasok.aggregate([
+ { $sort: { születésiév: 1 } },
+ {
+ $group: {
+ _id: "$_Járatszám",
+ legidosebb_nev: { $first: "$név" },
+ szuletesi_ev: { $first: "$születésiév" }
+ }
+ }
+])
