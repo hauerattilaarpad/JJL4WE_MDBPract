@@ -1,0 +1,384 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Reptér_JJL4WE": {
+      "type": "object",
+      "properties": {
+        "Járat": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "célállomás": { "type": "string" },
+                "indulási_idő": { "type": "string" },
+                "érkezési_idő": { "type": "string" },
+                "státusz": { "type": "string" },
+                "_Járatszám": { "type": "string" },
+                "_Légitársaság_ID": { "type": "string" }
+              },
+              "required": [ "célállomás", "indulási_idő", "érkezési_idő", "státusz", "_Járatszám", "_Légitársaság_ID" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "célállomás": { "type": "string" },
+                "indulási_idő": { "type": "string" },
+                "érkezési_idő": { "type": "string" },
+                "státusz": { "type": "string" },
+                "_Járatszám": { "type": "string" },
+                "_Légitársaság_ID": { "type": "string" }
+              },
+              "required": [ "célállomás", "indulási_idő", "érkezési_idő", "státusz", "_Járatszám", "_Légitársaság_ID" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "célállomás": { "type": "string" },
+                "indulási_idő": { "type": "string" },
+                "érkezési_idő": { "type": "string" },
+                "státusz": { "type": "string" },
+                "_Járatszám": { "type": "string" },
+                "_Légitársaság_ID": { "type": "string" }
+              },
+              "required": [ "célállomás", "indulási_idő", "érkezési_idő", "státusz", "_Járatszám", "_Légitársaság_ID" ]
+            }
+          ]
+        },
+        "Jegy": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "ár": { "type": "string" },
+                "légitársaság": { "type": "string" },
+                "uticél": {
+                  "type": "object",
+                  "properties": {
+                    "reptérnév": { "type": "string" },
+                    "ország": { "type": "string" }
+                  },
+                  "required": [ "reptérnév", "ország" ]
+                },
+                "indulási_idő": { "type": "string" },
+                "érkezési_idő": { "type": "string" },
+                "hely": {
+                  "type": "object",
+                  "properties": {
+                    "osztály": { "type": "string" },
+                    "székszám": { "type": "string" }
+                  },
+                  "required": [ "osztály", "székszám" ]
+                },
+                "_Jegysorszám": { "type": "string" }
+              },
+              "required": [ "ár", "légitársaság", "uticél", "indulási_idő", "érkezési_idő", "hely", "_Jegysorszám" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "ár": { "type": "string" },
+                "légitársaság": { "type": "string" },
+                "uticél": {
+                  "type": "object",
+                  "properties": {
+                    "reptérnév": { "type": "string" },
+                    "ország": { "type": "string" }
+                  },
+                  "required": [ "reptérnév", "ország" ]
+                },
+                "indulási_idő": { "type": "string" },
+                "érkezési_idő": { "type": "string" },
+                "hely": {
+                  "type": "object",
+                  "properties": {
+                    "osztály": { "type": "string" },
+                    "székszám": { "type": "string" }
+                  },
+                  "required": [ "osztály", "székszám" ]
+                },
+                "_Jegysorszám": { "type": "string" }
+              },
+              "required": [ "ár", "légitársaság", "uticél", "indulási_idő", "érkezési_idő", "hely", "_Jegysorszám" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "ár": { "type": "string" },
+                "légitársaság": { "type": "string" },
+                "uticél": {
+                  "type": "object",
+                  "properties": {
+                    "reptérnév": { "type": "string" },
+                    "ország": { "type": "string" }
+                  },
+                  "required": [ "reptérnév", "ország" ]
+                },
+                "indulási_idő": { "type": "string" },
+                "érkezési_idő": { "type": "string" },
+                "hely": {
+                  "type": "object",
+                  "properties": {
+                    "osztály": { "type": "string" },
+                    "székszám": { "type": "string" }
+                  },
+                  "required": [ "osztály", "székszám" ]
+                },
+                "_Jegysorszám": { "type": "string" }
+              },
+              "required": [ "ár", "légitársaság", "uticél", "indulási_idő", "érkezési_idő", "hely", "_Jegysorszám" ]
+            }
+          ]
+        },
+        "Utasok": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "név": { "type": "string" },
+                "születésiév": { "type": "string" },
+                "nem": { "type": "string" },
+                "lakcím": { "type": "string" },
+                "telefonszám": {
+                  "type": "array",
+                  "items": [
+                    { "type": "string" },
+                    { "type": "string" }
+                  ]
+                },
+                "_Útlevél": { "type": "string" },
+                "_Jegysorszám": { "type": "string" },
+                "_Járatszám": { "type": "string" }
+              },
+              "required": [ "név", "születésiév", "nem", "lakcím", "telefonszám", "_Útlevél", "_Jegysorszám", "_Járatszám" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "név": { "type": "string" },
+                "születésiév": { "type": "string" },
+                "nem": { "type": "string" },
+                "lakcím": { "type": "string" },
+                "telefonszám": {
+                  "type": "array",
+                  "items": [
+                    { "type": "string" },
+                    { "type": "string" },
+                    { "type": "string" }
+                  ]
+                },
+                "_Útlevél": { "type": "string" },
+                "_Jegysorszám": { "type": "string" },
+                "_Járatszám": { "type": "string" }
+              },
+              "required": [ "név", "születésiév", "nem", "lakcím", "telefonszám", "_Útlevél", "_Jegysorszám", "_Járatszám" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "név": { "type": "string" },
+                "születésiév": { "type": "string" },
+                "nem": { "type": "string" },
+                "lakcím": { "type": "string" },
+                "telefonszám": { "type": "string" },
+                "_Útlevél": { "type": "string" },
+                "_Jegysorszám": { "type": "string" },
+                "_Járatszám": { "type": "string" }
+              },
+              "required": [ "név", "születésiév", "nem", "lakcím", "telefonszám", "_Útlevél", "_Jegysorszám", "_Járatszám" ]
+            }
+          ]
+        },
+        "Szolgáltatás": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "típus": { "type": "string" },
+                "_SZ_ID": { "type": "string" },
+                "_D_ID": { "type": "string" },
+                "_Útlevél": { "type": "string" }
+              },
+              "required": [ "típus", "_SZ_ID", "_D_ID", "_Útlevél" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "típus": { "type": "string" },
+                "_SZ_ID": { "type": "string" },
+                "_D_ID": { "type": "string" },
+                "_Útlevél": { "type": "string" }
+              },
+              "required": [ "típus", "_SZ_ID", "_D_ID", "_Útlevél" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "típus": { "type": "string" },
+                "_SZ_ID": { "type": "string" },
+                "_D_ID": { "type": "string" },
+                "_Útlevél": { "type": "string" }
+              },
+              "required": [ "típus", "_SZ_ID", "_D_ID", "_Útlevél" ]
+            }
+          ]
+        },
+        "Dolgozó": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "név": { "type": "string" },
+                "munkakör": { "type": "string" },
+                "lakcím": { "type": "string" },
+                "telefonszám": { "type": "string" },
+                "fizetés": { "type": "string" },
+                "pozício": { "type": "string" },
+                "_D_ID": { "type": "string" },
+                "_Reptér_ID": { "type": "string" }
+              },
+              "required": [ "név", "munkakör", "lakcím", "telefonszám", "fizetés", "pozício", "_D_ID", "_Reptér_ID" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "név": { "type": "string" },
+                "munkakör": { "type": "string" },
+                "lakcím": { "type": "string" },
+                "telefonszám": { "type": "string" },
+                "fizetés": { "type": "string" },
+                "pozício": { "type": "string" },
+                "_D_ID": { "type": "string" },
+                "_Reptér_ID": { "type": "string" }
+              },
+              "required": [ "név", "munkakör", "lakcím", "telefonszám", "fizetés", "pozício", "_D_ID", "_Reptér_ID" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "név": { "type": "string" },
+                "munkakör": { "type": "string" },
+                "lakcím": { "type": "string" },
+                "telefonszám": {
+                  "type": "array",
+                  "items": [
+                    { "type": "string" },
+                    { "type": "string" },
+                    { "type": "string" }
+                  ]
+                },
+                "fizetés": { "type": "string" },
+                "pozício": { "type": "string" },
+                "_D_ID": { "type": "string" },
+                "_Reptér_ID": { "type": "string" }
+              },
+              "required": [ "név", "munkakör", "lakcím", "telefonszám", "fizetés", "pozício", "_D_ID", "_Reptér_ID" ]
+            }
+          ]
+        },
+        "Reptér": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "elhelyezkedés": {
+                  "type": "object",
+                  "properties": {
+                    "ország": { "type": "string" },
+                    "város": { "type": "string" },
+                    "irányítószám": { "type": "string" }
+                  },
+                  "required": [ "ország", "város", "irányítószám" ]
+                },
+                "_Reptér_ID": { "type": "string" }
+              },
+              "required": [ "elhelyezkedés", "_Reptér_ID" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "elhelyezkedés": {
+                  "type": "object",
+                  "properties": {
+                    "ország": { "type": "string" },
+                    "város": { "type": "string" },
+                    "irányítószám": { "type": "string" }
+                  },
+                  "required": [ "ország", "város", "irányítószám" ]
+                },
+                "_Reptér_ID": { "type": "string" }
+              },
+              "required": [ "elhelyezkedés", "_Reptér_ID" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "elhelyezkedés": {
+                  "type": "object",
+                  "properties": {
+                    "ország": { "type": "string" },
+                    "város": { "type": "string" },
+                    "irányítószám": { "type": "string" }
+                  },
+                  "required": [ "ország", "város", "irányítószám" ]
+                },
+                "_Reptér_ID": { "type": "string" }
+              },
+              "required": [ "elhelyezkedés", "_Reptér_ID" ]
+            }
+          ]
+        },
+        "Légitársaság": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "légitársaságnév": { "type": "string" },
+                "_Légitársaság_ID": { "type": "string" },
+                "_Reptér_ID": { "type": "string" }
+              },
+              "required": [ "légitársaságnév", "_Légitársaság_ID", "_Reptér_ID" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "légitársaságnév": { "type": "string" },
+                "_Légitársaság_ID": { "type": "string" },
+                "_Reptér_ID": { "type": "string" }
+              },
+              "required": [ "légitársaságnév", "_Légitársaság_ID", "_Reptér_ID" ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "légitársaságnév": { "type": "string" },
+                "_Légitársaság_ID": { "type": "string" },
+                "_Reptér_ID": { "type": "string" }
+              },
+              "required": [ "légitársaságnév", "_Légitársaság_ID", "_Reptér_ID" ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "Járat",
+        "Jegy",
+        "Utasok",
+        "Szolgáltatás",
+        "Dolgozó",
+        "Reptér",
+        "Légitársaság"
+      ]
+    }
+  },
+  "required": [
+    "Reptér_JJL4WE"
+  ]
+}

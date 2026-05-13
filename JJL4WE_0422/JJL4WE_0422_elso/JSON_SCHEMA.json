@@ -1,0 +1,627 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "vendeglatas": {
+      "type": "object",
+      "properties": {
+        "etterem": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "cim": {
+                  "type": "object",
+                  "properties": {
+                    "varos": {
+                      "type": "string"
+                    },
+                    "utca": {
+                      "type": "string"
+                    },
+                    "hazszam": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "varos",
+                    "utca",
+                    "hazszam"
+                  ]
+                },
+                "csillag": {
+                  "type": "string"
+                },
+                "_ekod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "cim",
+                "csillag",
+                "_ekod"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "cim": {
+                  "type": "object",
+                  "properties": {
+                    "varos": {
+                      "type": "string"
+                    },
+                    "utca": {
+                      "type": "string"
+                    },
+                    "hazszam": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "varos",
+                    "utca",
+                    "hazszam"
+                  ]
+                },
+                "csillag": {
+                  "type": "string"
+                },
+                "_ekod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "cim",
+                "csillag",
+                "_ekod"
+              ]
+            }
+          ]
+        },
+        "foszakacs": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "eletkor": {
+                  "type": "string"
+                },
+                "vegzettseg": {
+                  "type": "string"
+                },
+                "_fkod": {
+                  "type": "string"
+                },
+                "_e_f": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "eletkor",
+                "vegzettseg",
+                "_fkod",
+                "_e_f"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "eletkor": {
+                  "type": "string"
+                },
+                "vegzettseg": {
+                  "type": "string"
+                },
+                "_fkod": {
+                  "type": "string"
+                },
+                "_e_f": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "eletkor",
+                "vegzettseg",
+                "_fkod",
+                "_e_f"
+              ]
+            }
+          ]
+        },
+        "szakacs": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "reszleg": {
+                  "type": "string"
+                },
+                "vegzettseg": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "_szkod": {
+                  "type": "string"
+                },
+                "_e_sz": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "reszleg",
+                "vegzettseg",
+                "_szkod",
+                "_e_sz"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "reszleg": {
+                  "type": "string"
+                },
+                "vegzettseg": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "_szkod": {
+                  "type": "string"
+                },
+                "_e_sz": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "reszleg",
+                "vegzettseg",
+                "_szkod",
+                "_e_sz"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "reszleg": {
+                  "type": "string"
+                },
+                "vegzettseg": {
+                  "type": "string"
+                },
+                "_szkod": {
+                  "type": "string"
+                },
+                "_e_sz": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "reszleg",
+                "vegzettseg",
+                "_szkod",
+                "_e_sz"
+              ]
+            }
+          ]
+        },
+        "gyakornok": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "gyakorlat": {
+                  "type": "object",
+                  "properties": {
+                    "kezdete": {
+                      "type": "string"
+                    },
+                    "idotartama": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kezdete",
+                    "idotartama"
+                  ]
+                },
+                "muszak": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "_gykod": {
+                  "type": "string"
+                },
+                "_e_gy": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "gyakorlat",
+                "muszak",
+                "_gykod",
+                "_e_gy"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "gyakorlat": {
+                  "type": "object",
+                  "properties": {
+                    "kezdete": {
+                      "type": "string"
+                    },
+                    "idotartama": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kezdete",
+                    "idotartama"
+                  ]
+                },
+                "muszak": {
+                  "type": "string"
+                },
+                "_gykod": {
+                  "type": "string"
+                },
+                "_e_gy": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "gyakorlat",
+                "muszak",
+                "_gykod",
+                "_e_gy"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "gyakorlat": {
+                  "type": "object",
+                  "properties": {
+                    "kezdete": {
+                      "type": "string"
+                    },
+                    "idotartama": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kezdete",
+                    "idotartama"
+                  ]
+                },
+                "muszak": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "_gykod": {
+                  "type": "string"
+                },
+                "_e_gy": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "gyakorlat",
+                "muszak",
+                "_gykod",
+                "_e_gy"
+              ]
+            }
+          ]
+        },
+        "vendeg": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "eletkor": {
+                  "type": "string"
+                },
+                "cim": {
+                  "type": "object",
+                  "properties": {
+                    "varos": {
+                      "type": "string"
+                    },
+                    "utca": {
+                      "type": "string"
+                    },
+                    "hazszam": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "varos",
+                    "utca",
+                    "hazszam"
+                  ]
+                },
+                "_vkod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "eletkor",
+                "cim",
+                "_vkod"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "eletkor": {
+                  "type": "string"
+                },
+                "cim": {
+                  "type": "object",
+                  "properties": {
+                    "varos": {
+                      "type": "string"
+                    },
+                    "utca": {
+                      "type": "string"
+                    },
+                    "hazszam": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "varos",
+                    "utca",
+                    "hazszam"
+                  ]
+                },
+                "_vkod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "eletkor",
+                "cim",
+                "_vkod"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "nev": {
+                  "type": "string"
+                },
+                "eletkor": {
+                  "type": "string"
+                },
+                "cim": {
+                  "type": "object",
+                  "properties": {
+                    "varos": {
+                      "type": "string"
+                    },
+                    "utca": {
+                      "type": "string"
+                    },
+                    "hazszam": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "varos",
+                    "utca",
+                    "hazszam"
+                  ]
+                },
+                "_vkod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nev",
+                "eletkor",
+                "cim",
+                "_vkod"
+              ]
+            }
+          ]
+        },
+        "rendeles": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "etel": {
+                  "type": "string"
+                },
+                "osszeg": {
+                  "type": "string"
+                },
+                "datum": {
+                  "type": "string"
+                },
+                "_rkod": {
+                  "type": "string"
+                },
+                "_vkod": {
+                  "type": "string"
+                },
+                "_ekod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "etel",
+                "osszeg",
+                "datum",
+                "_rkod",
+                "_vkod",
+                "_ekod"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "etel": {
+                  "type": "string"
+                },
+                "osszeg": {
+                  "type": "string"
+                },
+                "datum": {
+                  "type": "string"
+                },
+                "_rkod": {
+                  "type": "string"
+                },
+                "_vkod": {
+                  "type": "string"
+                },
+                "_ekod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "etel",
+                "osszeg",
+                "datum",
+                "_rkod",
+                "_vkod",
+                "_ekod"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "etel": {
+                  "type": "string"
+                },
+                "osszeg": {
+                  "type": "string"
+                },
+                "datum": {
+                  "type": "string"
+                },
+                "_rkod": {
+                  "type": "string"
+                },
+                "_vkod": {
+                  "type": "string"
+                },
+                "_ekod": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "etel",
+                "osszeg",
+                "datum",
+                "_rkod",
+                "_vkod",
+                "_ekod"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "etterem",
+        "foszakacs",
+        "szakacs",
+        "gyakornok",
+        "vendeg",
+        "rendeles"
+      ]
+    }
+  },
+  "required": [
+    "vendeglatas"
+  ]
+}

@@ -1,0 +1,168 @@
+{
+	"vendeglatas": {
+		"etterem": [
+			{
+				"nev": "Trófea",
+				"cim": {
+					"varos": "Budapest",
+					"utca": "Visegrádi",
+					"hazszam": "13"
+				},
+				"csillag": "4",
+				"_ekod": "e1"
+			},
+			{
+				"nev": "Gundel",
+				"cim": {
+					"varos": "Budapest",
+					"utca": "Gundel Károly",
+					"hazszam": "4"
+				},
+				"csillag": "5",
+				"_ekod": "e2"
+			}
+		],
+		"foszakacs": [
+			{
+				"nev": "Havas Péter",
+				"eletkor": "35",
+				"vegzettseg": "Paul Bocuse Institute",
+				"_fkod": "f1",
+				"_e_f": "e1"
+			},
+			{
+				"nev": "Nagy Károly",
+				"eletkor": "30",
+				"vegzettseg": "Le Cordon Bleu",
+				"_fkod": "f2",
+				"_e_f": "e2"
+			}
+		],
+		"szakacs": [
+			{
+				"nev": "Ötlet Elek",
+				"reszleg": "Saucier",
+				"vegzettseg": [
+					"Szakközépiskola",
+					"Le Cordon Bleu",
+					"Paul Bocuse Institute"
+				],
+				"_szkod": "sz1",
+				"_e_sz": "e1"
+			},
+			{
+				"nev": "Kocsis Tibor",
+				"reszleg": "Entremetier",
+				"vegzettseg": [
+					"Szakközépiskola",
+					"Le Cordon Bleu"
+				],
+				"_szkod": "sz2",
+				"_e_sz": "e2"
+			},
+			{
+				"nev": "Tálas Levente",
+				"reszleg": "Gardemanger",
+				"vegzettseg": "Szakközépiskola",
+				"_szkod": "sz3",
+				"_e_sz": "e2"
+			}
+		],
+		"gyakornok": [
+			{
+				"nev": "Bordás Dávid",
+				"gyakorlat": {
+					"kezdete": "2021-08-20",
+					"idotartama": "2 hónap"
+				},
+				"muszak": [
+					"Délelőtt",
+					"Este"
+				],
+				"_gykod": "gy1",
+				"_e_gy": "e1"
+			},
+			{
+				"nev": "Szilágyi István",
+				"gyakorlat": {
+					"kezdete": "2021-06-01",
+					"idotartama": "4 hónap"
+				},
+				"muszak": "Délután",
+				"_gykod": "gy2",
+				"_e_gy": "e2"
+			},
+			{
+				"nev": "Szentpétery Ferenc",
+				"gyakorlat": {
+					"kezdete": "2021-04-02",
+					"idotartama": "10 hónap"
+				},
+				"muszak": [
+					"Délelőtt",
+					"Délután"
+				],
+				"_gykod": "gy3",
+				"_e_gy": "e1"
+			}
+		],
+		"vendeg": [
+			{
+				"nev": "Fekete Péter",
+				"eletkor": "21",
+				"cim": {
+					"varos": "Miskolc",
+					"utca": "Márton",
+					"hazszam": "17"
+				},
+				"_vkod": "v1"
+			},
+			{
+				"nev": "Bordás Áron",
+				"eletkor": "25",
+				"cim": {
+					"varos": "Eger",
+					"utca": "Dobó",
+					"hazszam": "12"
+				},
+				"_vkod": "v2"
+			},
+			{
+				"nev": "Kiss Hajnalka",
+				"eletkor": "26",
+				"cim": {
+					"varos": "Nyíregyháza",
+					"utca": "Arany János",
+					"hazszam": "5"
+				},
+				"_vkod": "v3"
+			}
+		],
+		"rendeles": [
+			{
+				"etel": "Rántott hús",
+				"osszeg": "4500",
+				"datum": "2021-09-15",
+				"_rkod": "r1",
+				"_vkod": "v1",
+				"_ekod": "e1"
+			},
+			{
+				"etel": "Libamáj terrine",
+				"osszeg": "8500",
+				"datum": "2021-09-20",
+				"_rkod": "r2",
+				"_vkod": "v2",
+				"_ekod": "e2"
+			},
+			{
+				"etel": "Grillezett lazac",
+				"osszeg": "6200",
+				"datum": "2021-10-01",
+				"_rkod": "r3",
+				"_vkod": "v3",
+				"_ekod": "e1"
+			}
+		]
+	}
+}

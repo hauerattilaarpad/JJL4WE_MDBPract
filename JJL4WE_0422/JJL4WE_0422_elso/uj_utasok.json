@@ -1,0 +1,10 @@
+[ {
+  "utas_név" : "Hauer Attila",
+  "telefonszámok" : [ "+36201234567", "+36701234567" ]
+}, {
+  "utas_név" : "Olivia Thompson",
+  "telefonszámok" : [ "+36209876428", "+36702138757", "+36705834653" ]
+}, {
+  "utas_név" : "Benjamin Mitchell",
+  "telefonszámok" : "+36202345965"
+} ]
